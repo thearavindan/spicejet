@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT" verbose="3">
+  <parameter name="browser" value="chrome"/>
+  <parameter name="url" value="https://www.spicejet.com/"/>
+  <listeners>
+    <listener class-name="utilities.ListenerSpiceJet"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)" verbose="3">
+    <classes>
+      <class name="testcases.TC009_RoundTripTest">
+        <methods>
+          <include name="closebrowser"/>
+          <include name="setup"/>
+          <include name="roundtriptest" invocation-numbers="0"/>
+          <include name="launchbrowser"/>
+        </methods>
+      </class> <!-- testcases.TC009_RoundTripTest -->
+      <class name="testcases.TC008_OneWayTripTest">
+        <methods>
+          <include name="setup"/>
+          <include name="closebrowser"/>
+          <include name="onewaytriptest" invocation-numbers="0"/>
+          <include name="launchbrowser"/>
+        </methods>
+      </class> <!-- testcases.TC008_OneWayTripTest -->
+      <class name="testcases.TC003_NegativeSignupTest">
+        <methods>
+          <include name="closebrowser"/>
+          <include name="launchbrowser"/>
+          <include name="setup"/>
+          <include name="negativesingnuptest" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- testcases.TC003_NegativeSignupTest -->
+      <class name="testcases.TC002_SignupTest">
+        <methods>
+          <include name="singnuptest" invocation-numbers="0"/>
+          <include name="setup"/>
+          <include name="closebrowser"/>
+          <include name="launchbrowser"/>
+        </methods>
+      </class> <!-- testcases.TC002_SignupTest -->
+      <class name="testcases.TC006_NegativeLoginTest_With_Mobno">
+        <methods>
+          <include name="negativelogintestwithmobno" invocation-numbers="0"/>
+          <include name="closebrowser"/>
+          <include name="setup"/>
+          <include name="launchbrowser"/>
+        </methods>
+      </class> <!-- testcases.TC006_NegativeLoginTest_With_Mobno -->
+      <class name="testcases.TC007_NegativeLoginTest_With_Email">
+        <methods>
+          <include name="closebrowser"/>
+          <include name="setup"/>
+          <include name="launchbrowser"/>
+          <include name="negativelogintestwithemail" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- testcases.TC007_NegativeLoginTest_With_Email -->
+      <class name="testcases.TC004_LoginTest_With_Mobno">
+        <methods>
+          <include name="logintestwithmobno" invocation-numbers="0"/>
+          <include name="closebrowser"/>
+          <include name="launchbrowser"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcases.TC004_LoginTest_With_Mobno -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
