@@ -15,7 +15,7 @@ public class TC005_LoginTest_With_Email extends Projectspecification{
 		excelfile="TC005_LoginTest_With_Email";
 	}
 	
-	@Test(priority = 5, dataProvider = "getdata", enabled = false)
+	@Test(dataProvider = "getdata")
 	public void logintestwithemail(String email, String password, String name) throws IOException, InterruptedException {
 		new Homepage(driver)
 		.login()

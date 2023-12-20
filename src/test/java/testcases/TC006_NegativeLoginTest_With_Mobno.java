@@ -16,7 +16,7 @@ public class TC006_NegativeLoginTest_With_Mobno extends Projectspecification {
 		excelfile="TC006_NegativeLoginTest_With_Mobno";
 	}
 	
-	@Test(priority = 6, dataProvider = "getdata",enabled = true)
+	@Test(dataProvider = "getdata")
 	public void negativelogintestwithmobno(String mob, String password, String invalidmsg) throws IOException, InterruptedException {
 		new Homepage(driver)
 		.login()

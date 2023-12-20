@@ -53,13 +53,13 @@ public class PassengersPage extends Projectspecification {
 	@FindBy(xpath="(//div[@class='css-1dbjc4n r-1habvwh r-19fu0aa r-1loqt21 r-mabqd8 r-1777fci r-1yt7n81 r-1otgn73'])[1]")
 	WebElement mr_p2;
 	
-	@FindBy(xpath="(//input[@type='text'])[6]")
+	@FindBy(xpath = "//input[@data-testid='traveller-1-first-traveller-info-input-box']")
 	WebElement firstname_p2;
 	
-	@FindBy(xpath="(//input[@type='text'])[7]")
+	@FindBy(xpath="//input[@data-testid='traveller-1-last-traveller-info-input-box']")
 	WebElement lastname_p2;
 	
-	@FindBy(xpath="(//input[@type='text'])[8]")
+	@FindBy(xpath="//input[@data-testid='sc-member-mobile-number-input-box']")
 	WebElement mobno_p2;
 	
 	@FindBy(xpath="//div[text()='Continue']")
@@ -143,18 +143,20 @@ public class PassengersPage extends Projectspecification {
 		return this;
 	}
 	
-	public PassengersPage lastnamep2(String lastname) {
+	public PassengersPage lastnamep2(String lastname){
+		actionclick(lastname_p2);
 		actionsendkeys(lastname_p2, lastname);
 		return this;
 	}
 	
 	public PassengersPage mobnop2(String mobno) {
+		actionclick(mobno_p2);
 		actionsendkeys(mobno_p2, mobno);
 		return this;
 	}
 	
 	public AddonsPage clickcontinue() {
-		click(continue1);
+		actionclick(continue1);
 		return new AddonsPage(driver);
 	}
 	

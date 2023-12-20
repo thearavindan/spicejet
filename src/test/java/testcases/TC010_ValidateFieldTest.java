@@ -9,7 +9,7 @@ import pages.Homepage;
 
 public class TC010_ValidateFieldTest extends Projectspecification {
 	
-	@Test(priority = 10, enabled = true)
+	@Test
 	public void fielstest() throws IOException {
 		new Homepage(driver)
 		.flightisdisplayed()

@@ -15,7 +15,7 @@ public class TC004_LoginTest_With_Mobno extends Projectspecification{
 		excelfile="TC004_LoginTest_With_Mobno";
 	}
 	
-	@Test(priority = 4, dataProvider = "getdata",enabled = false)
+	@Test(dataProvider = "getdata")
 	public void logintestwithmobno(String mob, String pass, String loginname) throws IOException, InterruptedException {
 		new Homepage(driver)
 		.login()

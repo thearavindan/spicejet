@@ -56,47 +56,49 @@ public class PaymentPage extends Projectspecification{
 		PageFactory.initElements(driver, this);
 	}
 	
-	public PaymentPage clickcreditdebitcard() {
+	public PaymentPage clickcreditdebitcard() throws InterruptedException {
 		click(Credit_DebitCard);
+		threadsleep();
 		return this;
 	}
 	
 	public PaymentPage entercardno(String num) {
 		switchtoframe(frame1);
-		actionsendkeys(cardno, num);
+		sendkeys(cardno, num);
 		exitframe();
 		return this;
 	}
 	
 	public PaymentPage entercardname(String name) {
 		switchtoframe(frame2);
-		actionsendkeys(nameoncard, name);
+		sendkeys(nameoncard, name);
 		exitframe();
 		return this;
 	}
 	
 	public PaymentPage enterexpmonth(String month) {
 		switchtoframe(frame3);
-		actionsendkeys(expmonth, month);
+		sendkeys(expmonth, month);
 		exitframe();
 		return this;
 	}
 	
 	public PaymentPage enterexpyear(String year) {
 		switchtoframe(frame4);
-		actionsendkeys(expyear, year);
+		sendkeys(expyear, year);
 		exitframe();
 		return this;
 	}
 	
 	public PaymentPage enterccvno(String num) {
 		switchtoframe(frame5);
-		actionsendkeys(cvvcode, num);
+		sendkeys(cvvcode, num);
 		exitframe();
 		return this;
 	}
 	
-	public PaymentPage proceedtopay() {
+	public PaymentPage proceedtopay() throws InterruptedException {
+		jsscrolldown(proccedtopay);
 		actionclick(proccedtopay);
 		return this;
 	}

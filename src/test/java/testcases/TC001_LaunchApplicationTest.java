@@ -8,7 +8,7 @@ import base.Projectspecification;
 import pages.Homepage;
 
 public class TC001_LaunchApplicationTest extends Projectspecification {
-	@Test(priority = 1,enabled = false)
+	@Test
 	public void lauchapp() throws IOException {
 		new Homepage(driver)
 		.takescreenshot("TC001_LaunchApplication");

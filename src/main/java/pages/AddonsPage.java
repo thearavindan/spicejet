@@ -32,11 +32,17 @@ public class AddonsPage extends Projectspecification{
 		return this;
 	}
 	
+	public AddonsPage continuetoselectseat() {
+		jsscrolldown(continue2);
+		actionclick(continue2);
+		return this;
+	}
+	
 	public AddonsPage selectseat() {
 		try {
 			waitforvisibility(selectnow);
 			click(selectnow);
-			click(done);
+			actionclick(done);
 			
 		} catch (Exception e) {
 			System.out.println("webelement not displayed");
@@ -45,8 +51,9 @@ public class AddonsPage extends Projectspecification{
 		
 	}
 	
-	public PaymentPage clickcontinue() {
-		click(continue2);
+	public PaymentPage clickcontinue() throws InterruptedException {
+		threadsleep();
+		actionclick(continue2);
 		return new PaymentPage(driver);
 	}
 

@@ -139,6 +139,14 @@ public class Utility {                        //spicejet
 			return path;
 		}
 		
+		public void takesnap(String testmethodname) throws IOException {
+			String path = "./screenshots/"+testmethodname+".png";
+			TakesScreenshot screenshot = ((TakesScreenshot)driver);
+			File source = screenshot.getScreenshotAs(OutputType.FILE);
+			File dest = new File(path);
+			FileUtils.copyFile(source, dest);
+		}
+		
 		public void actionclick(WebElement ele) {
 			Actions builder = new Actions (driver);
 			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
@@ -189,7 +197,7 @@ public class Utility {                        //spicejet
 		}
 		
 		public void threadsleep() throws InterruptedException {
-			Thread.sleep(7000);
+			Thread.sleep(5000);
 		}
 
 }

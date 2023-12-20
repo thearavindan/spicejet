@@ -103,8 +103,7 @@ public class LoginPage extends Projectspecification {
 		return this;
 	}
 	
-	public LoginPage invalidloginmsg(String errmsg) {
-		waitforvisibility(errormessage);
+	public LoginPage invalidloginmsg(String errmsg) throws InterruptedException {
 		verifymessage(errormessage, errmsg);
 		return this;
 	}

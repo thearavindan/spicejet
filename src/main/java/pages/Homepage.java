@@ -133,8 +133,7 @@ public class Homepage extends Projectspecification{ //spicejet
 		return this;
 	}
 	
-	public Homepage tolocation() {
-		click(to);
+	public Homepage tolocation()  {
 		click(region);
 		click(tocity);
 		return this;
@@ -160,7 +159,7 @@ public class Homepage extends Projectspecification{ //spicejet
 	}
 	
 	public FlightsPage clicksearchflight() {
-		click(searchflight);
+		actionclick(searchflight);
 		return new FlightsPage(driver);
 	}
 

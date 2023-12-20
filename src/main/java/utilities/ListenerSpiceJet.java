@@ -14,11 +14,11 @@ import base.Projectspecification;
 
 public class ListenerSpiceJet extends Projectspecification implements ITestListener {
 	ExtentTest test;
-	ExtentReports extent = ExtendReportSpiceJet.getreport();
+	ExtentReports extents = ExtendReportSpiceJet.getreport();
 	
 	@Override
 	public void onTestStart(ITestResult result) {
-		test = extent.createTest(result.getMethod().getMethodName());
+		test = extents.createTest(result.getMethod().getMethodName());
 		System.out.println("test started");
 	}
 
@@ -49,7 +49,7 @@ public class ListenerSpiceJet extends Projectspecification implements ITestListe
 
 	@Override
 	public void onFinish(ITestContext context) {
-		extent.flush();
+		extents.flush();
 	}
 
 

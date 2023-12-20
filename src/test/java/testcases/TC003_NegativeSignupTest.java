@@ -15,7 +15,7 @@ public class TC003_NegativeSignupTest extends Projectspecification {
 		excelfile="TC003_NegativeSignupTest";
 	}
 	
-	@Test(priority = 3, dataProvider  = "getdata",enabled = false)
+	@Test(dataProvider  = "getdata")
 	
 	public void negativesingnuptest(String firstname, String lastname, String mobileno, String emailid, String passward, String conpass,
 			                               String fnameerrmsg, String lastnameerrmsg, String moberrmsg, String mailerrmsg, String passerrmsg,

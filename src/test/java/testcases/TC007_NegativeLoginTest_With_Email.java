@@ -15,7 +15,7 @@ public class TC007_NegativeLoginTest_With_Email extends Projectspecification {
 		excelfile="TC007_NegativeLoginTest_With_Email";
 	}
 	
-	@Test(priority = 7, dataProvider = "getdata",enabled = true)
+	@Test(dataProvider = "getdata")
 	public void negativelogintestwithemail(String email, String password, String invalidmsg) throws IOException, InterruptedException {
 		new Homepage(driver)
 		.login()

@@ -15,10 +15,10 @@ public class TC009_RoundTripTest extends Projectspecification {
 		excelfile="TC009_RoundTripTest";
 	}
 	
-	@Test(priority = 9, dataProvider = "getdata", enabled = true)
+	@Test(dataProvider = "getdata")
 	public void roundtriptest(String firstname, String lastname, String contact, String email, String city, 
 			                                     String p2firstname, String p2lastname, String p2mobno, String cardno,
-			                                     String cardname, String expmonth, String expyear, String ccv, String errmsg ) throws IOException {
+			                                     String cardname, String expmonth, String expyear, String ccv, String errmsg ) throws IOException, InterruptedException {
 		
 		new Homepage(driver)
 		.roundtrip()
@@ -28,8 +28,6 @@ public class TC009_RoundTripTest extends Projectspecification {
 		.returndate()
 		.passengers()
 		.clicksearchflight()
-		.selectdepature()
-		.selectreturnflight()
 		.clickcontinue2()
 		.title()
 		.firstnamecd(firstname)
@@ -40,11 +38,11 @@ public class TC009_RoundTripTest extends Projectspecification {
 		.city(city)
 		.checkprimarypassanger()
 		.clicknext()
-		.titilep2()
 		.firstnamep2(p2firstname)
 		.lastnamep2(p2lastname)
 		.mobnop2(p2mobno)
 		.clickcontinue()
+		.continuetoselectseat()
 		.selectseat()
 		.clickcontinue()
 		.clickcreditdebitcard()
