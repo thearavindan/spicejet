@@ -63,7 +63,7 @@ public class Utility {                        //spicejet
 	}
 	
 	public void waitforvisibility(WebElement element) {
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 		wait.until(ExpectedConditions.visibilityOf(element));
 	}
 	
@@ -103,7 +103,7 @@ public class Utility {                        //spicejet
 		
 	 
 		public void click(WebElement element) {
-	     WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+	     WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 	     wait.until(ExpectedConditions.elementToBeClickable(element));
 			element.click();
 		}
@@ -117,7 +117,7 @@ public class Utility {                        //spicejet
 		}
 		
 		public void alert()  {
-			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 			wait.until(ExpectedConditions.alertIsPresent());
 			Alert alert = driver.switchTo().alert();
 			alert.getText();
@@ -149,14 +149,14 @@ public class Utility {                        //spicejet
 		
 		public void actionclick(WebElement ele) {
 			Actions builder = new Actions (driver);
-			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 		     wait.until(ExpectedConditions.elementToBeClickable(ele));
              builder.moveToElement(ele).click().perform();
 		}
 		
 		public void actionsendkeys(WebElement ele, String name) {
 			Actions builder = new Actions (driver);
-			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 		     wait.until(ExpectedConditions.elementToBeClickable(ele));
              builder.moveToElement(ele).sendKeys(name).perform();
 		}

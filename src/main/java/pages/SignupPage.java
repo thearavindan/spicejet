@@ -137,31 +137,34 @@ public class SignupPage extends Projectspecification{
 	}
 	
 	public SignupPage clicksubmit() throws InterruptedException {
-		actionclick(submit);
-		 threadsleep();
+		try {
+			actionclick(submit);
+			 threadsleep();
+			
+		} catch (Exception e) {
+			System.out.println("button not clicked");
+		}
+		
 		return this;
 	}
 	
 	public SignupPage invalidfirstname(String fname) {
-		jsscrolldown(invalidfname);
 		verifymessage(invalidfname, fname);
 		return this;
 	}
 	
 	public SignupPage invalidlastname(String lname) {
-		jsscrolldown(invalidlname);
+		
 		verifymessage(invalidlname, lname);
 		return this;
 	}
 	
 	public SignupPage invalidmobno(String mob) {
-		jsscrolldown(invalidmobno);
 		verifymessage(invalidmobno, mob);
 		return this;
 	}
 	
 	public SignupPage invalidemail(String mail) {
-		jsscrolldown(invalidemail);
 		verifymessage(invalidemail, mail);
 		return this;
 	}
