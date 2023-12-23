@@ -32,7 +32,7 @@ public class AddonsPage extends Projectspecification{
 		return this;
 	}
 	
-	public AddonsPage continuetoselectseat() {
+	public AddonsPage continuetoselectseat() throws InterruptedException {
 		jsscrolldown(continue2);
 		actionclick(continue2);
 		return this;

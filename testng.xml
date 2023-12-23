@@ -9,7 +9,7 @@
 	  <parameter name="browser" value="chrome"></parameter>
     <classes>
    <class name="testcases.TC001_LaunchApplicationTest"/>
-   <class name="testcases.TC007_NegativeLoginTest_With_Email"/>
+   <class name="testcases.TC002_SignupTest"/>
   <class name="testcases.TC008_OneWayTripTest"/>
  <class name="testcases.TC009_RoundTripTest"/>
  <class name="testcases.TC010_ValidateFieldTest"/>
@@ -20,11 +20,12 @@
 <test name="edge Test">
 	<parameter name="browser" value="edge"></parameter>
 	<classes>
-<class name="testcases.TC002_SignupTest"/>
+
  <class name="testcases.TC003_NegativeSignupTest"/>
  <class name="testcases.TC004_LoginTest_With_Mobno"/>
 <class name="testcases.TC005_LoginTest_With_Email"/>
  <class name="testcases.TC006_NegativeLoginTest_With_Mobno"/>
+ <class name="testcases.TC007_NegativeLoginTest_With_Email"/>
 	</classes>
 	
 </test>

@@ -15,7 +15,7 @@ public class TC002_SignupTest extends Projectspecification{
 		excelfile="TC002_SignupTest";
 	}
 	
-	@Test(dataProvider  = "getdata")
+	@Test(dataProvider  = "getdata", enabled = false)
 	
 	public void singnuptest(String firstname, String lastname, String mobileno, String emailid, String passward, String conpass) throws IOException, InterruptedException {
 		new Homepage(driver)

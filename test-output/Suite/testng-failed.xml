@@ -8,35 +8,35 @@
   <test thread-count="5" name="Chrome Test(failed)" verbose="2">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="testcases.TC009_RoundTripTest">
+      <class name="testcases.TC008_OneWayTripTest">
         <methods>
-          <include name="closebrowser"/>
-          <include name="setup"/>
-          <include name="roundtriptest" invocation-numbers="0"/>
-          <include name="launchbrowser"/>
-        </methods>
-      </class> <!-- testcases.TC009_RoundTripTest -->
-      <class name="testcases.TC007_NegativeLoginTest_With_Email">
-        <methods>
-          <include name="closebrowser"/>
-          <include name="setup"/>
-          <include name="launchbrowser"/>
-          <include name="negativelogintestwithemail" invocation-numbers="0"/>
-        </methods>
-      </class> <!-- testcases.TC007_NegativeLoginTest_With_Email -->
-      <class name="testcases.TC002_SignupTest">
-        <methods>
-          <include name="singnuptest" invocation-numbers="0"/>
           <include name="setup"/>
           <include name="closebrowser"/>
+          <include name="onewaytriptest" invocation-numbers="0"/>
           <include name="launchbrowser"/>
         </methods>
-      </class> <!-- testcases.TC002_SignupTest -->
+      </class> <!-- testcases.TC008_OneWayTripTest -->
     </classes>
   </test> <!-- Chrome Test(failed) -->
-  <test thread-count="5" name="Firefox Test(failed)" verbose="2">
-    <parameter name="browser" value="firefox"/>
+  <test thread-count="5" name="edge Test(failed)" verbose="2">
+    <parameter name="browser" value="edge"/>
     <classes>
+      <class name="testcases.TC003_NegativeSignupTest">
+        <methods>
+          <include name="closebrowser"/>
+          <include name="launchbrowser"/>
+          <include name="setup"/>
+          <include name="negativesingnuptest" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- testcases.TC003_NegativeSignupTest -->
+      <class name="testcases.TC004_LoginTest_With_Mobno">
+        <methods>
+          <include name="logintestwithmobno" invocation-numbers="0"/>
+          <include name="closebrowser"/>
+          <include name="launchbrowser"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcases.TC004_LoginTest_With_Mobno -->
       <class name="testcases.TC005_LoginTest_With_Email">
         <methods>
           <include name="logintestwithemail" invocation-numbers="0"/>
@@ -45,14 +45,6 @@
           <include name="launchbrowser"/>
         </methods>
       </class> <!-- testcases.TC005_LoginTest_With_Email -->
-      <class name="testcases.TC003_NegativeSignupTest">
-        <methods>
-          <include name="closebrowser"/>
-          <include name="launchbrowser"/>
-          <include name="setup"/>
-          <include name="negativesingnuptest"/>
-        </methods>
-      </class> <!-- testcases.TC003_NegativeSignupTest -->
     </classes>
-  </test> <!-- Firefox Test(failed) -->
+  </test> <!-- edge Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
